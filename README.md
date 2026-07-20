@@ -1,4 +1,4 @@
-# Samuel Chung Resume Website
+# Sam Chung Resume Website
 
 ## Senior Full Stack Engineer | AI-Enabled Software Engineer
 
