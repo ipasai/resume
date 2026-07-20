@@ -1,6 +1,6 @@
 /*
 ====================================
- Samuel Chung Resume Website
+ Sam Chung Resume Website
  Version 2 JavaScript
 ====================================
 */
@@ -432,7 +432,7 @@ footer.innerHTML =
 
 `
 © ${new Date().getFullYear()}
-Samuel Chung.
+Sam Chung.
 Senior Full Stack Engineer.
 `;
 
