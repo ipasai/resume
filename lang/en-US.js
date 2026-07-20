@@ -1,7 +1,7 @@
 /*
 ====================================
  English Language Pack
- Samuel Chung Resume
+ Sam Chung Resume
 ====================================
 */
 
