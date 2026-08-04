@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sam Chung - Tech Resume (A4 Print Ready)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Noto+Sans+TC:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  
+  <style>
+    /* 設定標準 A4 尺寸 */
+    .a4-page {
+      width: 210mm;
+      height: 297mm;
+      padding: 18mm 18mm;
+      margin: 20px auto;
+      box-sizing: border-box;
+      position: relative;
+      background-color: #020617;
+      border: 1px solid #1e293b;
+      overflow: hidden;
+    }
+
+    .bg-tech-grid {
+      background-size: 30px 30px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    }
+
+    .tech-card {
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .tech-tag {
+      padding: 2px 8px;
+      border-radius: 4px;
+      background-color: #0f172a;
+      border: 1px solid #1e293b;
+      color: #cbd5e1;
+      font-size: 11px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* 列印與轉出 PDF / 圖片最佳化 */
+    @media print {
+      body {
+        background-color: #020617 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .a4-page {
+        margin: 0;
+        border: none;
+        page-break-after: always;
+      }
+    }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-200 font-sans antialiased">
+
+  <!-- ==================== PAGE 1 ==================== -->
+  <div class="a4-page bg-tech-grid flex flex-col justify-between shadow-2xl">
+    <div>
+      <!-- Header / Hero Section -->
+      <div class="flex justify-between items-start border-b border-slate-800 pb-6 mb-6">
+        <div>
+          <div class="inline-flex items-center space-x-2 px-2.5 py-0.5 rounded-full bg-cyan-950/80 border border-cyan-500/30 text-cyan-400 text-[11px] font-mono mb-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+            <span>AI 輔助開發 · 資深全端工程師</span>
+          </div>
+          <h1 class="text-4xl font-extrabold text-white tracking-tight">Sam Chung</h1>
+          <p class="text-base font-mono text-cyan-400 font-semibold mt-1">Frontend | Backend | Architecture</p>
+        </div>
+
+        <div class="text-right space-y-1 font-mono text-xs text-slate-400">
+          <div><i class="fa-regular fa-envelope text-cyan-400"></i> knight660907@gmail.com</div>
+          <div><i class="fa-solid fa-location-dot text-cyan-400"></i> New Taipei City, Taiwan</div>
+          <div class="text-emerald-400 font-bold">Remote & Hybrid Ready</div>
+        </div>
+      </div>
+
+      <!-- Key Stats Grid -->
+      <div class="grid grid-cols-3 gap-4 mb-6">
+        <div class="tech-card p-3 rounded-lg text-center">
+          <div class="text-xl font-bold font-mono text-cyan-400">25+</div>
+          <div class="text-[11px] text-slate-400">Years Exp.</div>
+        </div>
+        <div class="tech-card p-3 rounded-lg text-center">
+          <div class="text-xl font-bold font-mono text-indigo-400">100+</div>
+          <div class="text-[11px] text-slate-400">Projects Completed</div>
+        </div>
+        <div class="tech-card p-3 rounded-lg text-center">
+          <div class="text-xl font-bold font-mono text-emerald-400">Full Stack</div>
+          <div class="text-[11px] text-slate-400">Architecture & Dev</div>
+        </div>
+      </div>
+
+      <!-- 01. 關於我 -->
+      <div class="mb-6">
+        <h2 class="text-lg font-bold text-white mb-2 font-mono border-l-4 border-cyan-400 pl-3">
+          01. 關於我 / About Me
+        </h2>
+        <div class="tech-card p-4 rounded-lg text-xs leading-relaxed text-slate-300 space-y-2">
+          <p>
+            擁有超過 <strong class="text-white">25 年</strong> 的軟體開發經驗，熟悉前端、後端、資料庫與系統架構設計。曾參與電子商務、教育科技、遊戲平台、企業管理系統等不同領域專案。
+          </p>
+          <p>
+            持續導入 <strong class="text-cyan-400">AI 輔助開發流程</strong>，提高程式品質、開發效率與系統維護能力。
+          </p>
+        </div>
+      </div>
+
+      <!-- 02. 技術能力 -->
+      <div class="mb-6">
+        <h2 class="text-lg font-bold text-white mb-3 font-mono border-l-4 border-cyan-400 pl-3">
+          02. 技術能力 / Technical Skills
+        </h2>
+        <div class="grid grid-cols-2 gap-3 text-xs">
+          <div class="tech-card p-3 rounded-lg">
+            <div class="font-bold text-cyan-400 mb-1"><i class="fa-solid fa-code"></i> Frontend</div>
+            <p class="text-slate-300 font-mono text-[11px]">Vue.js, Nuxt.js, React, Next.js, Angular, Svelte, TypeScript, JavaScript, Cocos Creator, Bootstrap, Tailwind CSS, JQuery</p>
+          </div>
+          <div class="tech-card p-3 rounded-lg">
+            <div class="font-bold text-indigo-400 mb-1"><i class="fa-solid fa-server"></i> Backend</div>
+            <p class="text-slate-300 font-mono text-[11px]">Python, Django, GO, Node.js, Express.js, Nest.js, ASP.NET</p>
+          </div>
+          <div class="tech-card p-3 rounded-lg">
+            <div class="font-bold text-indigo-400 mb-1"><i class="fa-solid fa-server"></i> Other</div>
+            <p class="text-slate-300 font-mono text-[11px]">C#, VB.NET, ASP.NET, ASP, PHP, Laravel, CodeIgniter, Java, VB6, Delphi, C/C++</p>
+          </div>
+          <div class="tech-card p-3 rounded-lg">
+            <div class="font-bold text-indigo-400 mb-1"><i class="fa-solid fa-server"></i> AI</div>
+            <p class="text-slate-300 font-mono text-[11px]">LangChain, Ollama, Machine Learning</p>
+          </div>
+          <div class="tech-card p-3 rounded-lg">
+            <div class="font-bold text-emerald-400 mb-1"><i class="fa-solid fa-database"></i> Database</div>
+            <p class="text-slate-300 font-mono text-[11px]">MySQL, PostgreSQL, MSSQL, MariaDB, MongoDB, Redis, Redshift, SQLite, Access</p>
+          </div>
+          <div class="tech-card p-3 rounded-lg">
+            <div class="font-bold text-purple-400 mb-1"><i class="fa-solid fa-screwdriver-wrench"></i> DevOps</div>
+            <p class="text-slate-300 font-mono text-[11px]">Docker, Docker Compose, Git, GitLab, GitHub, Bitbucket, Nginx, Apache, IIS</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03. AI 技術整合 -->
+      <div>
+        <h2 class="text-lg font-bold text-white mb-3 font-mono border-l-4 border-cyan-400 pl-3">
+          03. AI & Modern Development
+        </h2>
+        <div class="grid grid-cols-3 gap-3">
+          <div class="tech-card p-3 rounded-lg text-xs">
+            <div class="font-bold text-white mb-1"><i class="fa-solid fa-wand-magic-sparkles text-cyan-400"></i> AI-Assisted Dev</div>
+            <p class="text-slate-400 text-[10px] leading-normal">提升 Coding 效率、重構、自動化測試與技術文件生成。</p>
+          </div>
+          <div class="tech-card p-3 rounded-lg text-xs">
+            <div class="font-bold text-white mb-1"><i class="fa-solid fa-brain text-indigo-400"></i> LLM Integration</div>
+            <p class="text-slate-400 text-[10px] leading-normal">串接 OpenAI API 與 Prompt 規劃，賦予 Web 智慧應用。</p>
+          </div>
+          <div class="tech-card p-3 rounded-lg text-xs">
+            <div class="font-bold text-white mb-1"><i class="fa-solid fa-gears text-emerald-400"></i> AI Workflow</div>
+            <p class="text-slate-400 text-[10px] leading-normal">優化企業開發流程，實現高效能智慧自動化管理。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page 1 Footer -->
+    <div class="flex justify-between items-center text-[10px] font-mono text-slate-500 border-t border-slate-800 pt-3">
+      <span>Sam Chung - Resume</span>
+      <span>Page 01 / 02</span>
+    </div>
+  </div>
+
+
+  <!-- ==================== PAGE 2 ==================== -->
+  <div class="a4-page bg-tech-grid flex flex-col justify-between shadow-2xl">
+    <div>
+      <!-- 04. 工作經歷 -->
+      <div class="mb-8">
+        <h2 class="text-lg font-bold text-white mb-4 font-mono border-l-4 border-cyan-400 pl-3">
+          04. 工作經歷 / Experience
+        </h2>
+
+        <div class="relative border-l border-slate-800 ml-2 space-y-5 text-xs">
+          
+          <div class="relative pl-6">
+            <span class="absolute -left-1.5 top-1 w-3 h-3 rounded-full bg-cyan-400"></span>
+            <div class="flex justify-between font-mono text-[11px]">
+              <span class="text-white font-bold">Frontend Engineer @ 銳光管理顧問有限公司</span>
+              <span class="text-cyan-400">2025.05 - 2026.03</span>
+            </div>
+            <p class="text-slate-400 mt-1">開發和維護前端應用程序，負責使用者介面實現、系統整合和技術改進。</p>
+          </div>
+
+          <div class="relative pl-6">
+            <span class="absolute -left-1.5 top-1 w-3 h-3 rounded-full bg-slate-700"></span>
+            <div class="flex justify-between font-mono text-[11px]">
+              <span class="text-white font-bold">Frontend Engineer @ 獨角獸管理顧問有限公司</span>
+              <span class="text-cyan-400">2023.06 - 2025.04</span>
+            </div>
+            <p class="text-slate-400 mt-1">負責前端開發、應用程式維護以及與後端團隊的協作。</p>
+          </div>
+
+          <div class="relative pl-6">
+            <span class="absolute -left-1.5 top-1 w-3 h-3 rounded-full bg-slate-700"></span>
+            <div class="flex justify-between font-mono text-[11px]">
+              <span class="text-white font-bold">Full Stack Developer @ SOHO / 獨立開發者</span>
+              <span class="text-cyan-400">2020.08 - 2023.05</span>
+            </div>
+            <p class="text-slate-400 mt-1">承接多家企業軟體專案，涵蓋全端系統建置、資料庫規劃、微服務與 API 串接。</p>
+          </div>
+
+          <div class="relative pl-6">
+            <span class="absolute -left-1.5 top-1 w-3 h-3 rounded-full bg-slate-700"></span>
+            <div class="flex justify-between font-mono text-[11px]">
+              <span class="text-white font-bold">Software Engineer @ 暐曜教育科技有限公司</span>
+              <span class="text-cyan-400">2018.12 - 2020.07</span>
+            </div>
+            <p class="text-slate-400 mt-1">開發 Education Tech 平台、管理後端核心業務邏輯與資料庫最佳化。</p>
+          </div>
+
+          <div class="relative pl-6">
+            <span class="absolute -left-1.5 top-1 w-3 h-3 rounded-full bg-slate-700"></span>
+            <div class="flex justify-between font-mono text-[11px]">
+              <span class="text-white font-bold">Web Development Supervisor @ 京群超媒體股份有限公司</span>
+              <span class="text-cyan-400">2012.03 - 2016.11</span>
+            </div>
+            <p class="text-slate-400 mt-1">管理技術團隊，規劃大型電商與遊戲平台系統架構、金流串接與高流量處理。</p>
+          </div>
+
+          <div class="relative pl-6">
+            <span class="absolute -left-1.5 top-1 w-3 h-3 rounded-full bg-slate-700"></span>
+            <div class="flex justify-between font-mono text-[11px]">
+              <span class="text-white font-bold">Internet Programmer @ 宇峻奧汀科技股份有限公司</span>
+              <span class="text-cyan-400">2009.10 - 2012.02</span>
+            </div>
+            <p class="text-slate-400 mt-1">開發了遊戲網站、活動平台和後端管理系統。</p>
+          </div>
+
+          <div class="relative pl-6">
+            <span class="absolute -left-1.5 top-1 w-3 h-3 rounded-full bg-slate-700"></span>
+            <div class="flex justify-between font-mono text-[11px]">
+              <span class="text-white font-bold">Software Engineer @ 傑邁電子股份有限公司</span>
+              <span class="text-cyan-400">2006.10 - 2008.05</span>
+            </div>
+            <p class="text-slate-400 mt-1">為醫療設備系統開發軟體應用程式、測試工具和自動化控製程式。</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 05. 專業證照 -->
+      <div class="mb-8">
+        <h2 class="text-lg font-bold text-white mb-3 font-mono border-l-4 border-cyan-400 pl-3">
+          05. 專業證照 / Certifications
+        </h2>
+        <div class="grid grid-cols-3 gap-3 text-xs">
+          <div class="tech-card p-3 rounded-lg border-l-2 border-l-cyan-400">
+            <div class="font-bold text-white">Java</div>
+            <p class="text-[10px] text-slate-400 font-mono">PearsonVue / Certiport</p>
+            <span class="inline-block mt-2 text-[9px] font-mono px-1.5 py-0.5 rounded bg-slate-800 text-cyan-300">Issued 2026</span>
+          </div>
+
+          <div class="tech-card p-3 rounded-lg border-l-2 border-l-indigo-400">
+            <div class="font-bold text-white">Python</div>
+            <p class="text-[10px] text-slate-400 font-mono">PearsonVue / Certiport</p>
+            <span class="inline-block mt-2 text-[9px] font-mono px-1.5 py-0.5 rounded bg-slate-800 text-indigo-300">Issued 2026</span>
+          </div>
+
+          <div class="tech-card p-3 rounded-lg border-l-2 border-l-emerald-400">
+            <div class="font-bold text-white">Database</div>
+            <p class="text-[10px] text-slate-400 font-mono">PearsonVue / Certiport</p>
+            <span class="inline-block mt-2 text-[9px] font-mono px-1.5 py-0.5 rounded bg-slate-800 text-emerald-300">Issued 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4 mb-6">
+        <div class="tech-card p-3 rounded-lg text-center">
+          <div class="text-xl font-bold font-mono text-indigo-400 flex items-center justify-center">
+            <image src="assets/img/GitHub.png" style="width:50%" />
+          </div>
+        </div>
+        <div class="tech-card p-3 rounded-lg text-center">
+          <div class="text-xl font-bold font-mono text-emerald-400 flex items-center justify-center">
+            <image src="assets/img/Resume.png" style="width:50%;" />
+          </div>
+        </div>
+      </div>
+      <!-- Contact Callout -->
+      <div class="tech-card p-4 rounded-lg text-center space-y-1">
+        <div class="text-xs font-mono text-cyan-400">// Ready for New Opportunities</div>
+        <div class="text-sm font-bold text-white">Let's Build Something Great Together</div>
+        <div class="text-xs text-slate-400 font-mono">knight660907@gmail.com · New Taipei City, Taiwan</div>
+      </div>
+    </div>
+
+    <!-- Page 2 Footer -->
+    <div class="flex justify-between items-center text-[10px] font-mono text-slate-500 border-t border-slate-800 pt-3">
+      <span>Sam Chung - Resume</span>
+      <span>Page 02 / 02</span>
+    </div>
+  </div>
+
+</body>
+</html>
