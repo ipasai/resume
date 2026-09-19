@@ -133,7 +133,7 @@ element.dataset.i18n;
 if(data[key]){
 
 
-element.textContent =
+element.innerHTML =
 data[key];
 
 

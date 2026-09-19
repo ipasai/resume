@@ -13,7 +13,7 @@
     .a4-page {
       width: 210mm;
       height: 297mm;
-      padding: 18mm 18mm;
+      padding: 14mm 16mm;
       margin: 20px auto;
       box-sizing: border-box;
       position: relative;
@@ -30,149 +30,156 @@
         linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
     }
 
-    /* 卡片背景改為極淺灰，搭配深灰細邊框 */
+    /* 白底卡片樣式 */
     .tech-card {
-      background: #f8fafc;
-      border: 1px solid #cbd5e1;
+      background: #f8fafc; /* 非常淡的灰藍底 */
+      border: 1px solid #e2e8f0;
     }
 
-    .tech-tag {
-      padding: 2px 8px;
-      border-radius: 4px;
-      background-color: #f1f5f9;
-      border: 1px solid #cbd5e1;
-      color: #0f172a;
-      font-size: 11px;
-      font-family: 'JetBrains Mono', monospace;
-    }
-
-    /* 列印與轉出 PDF / 圖片最佳化 */
+    /* 強化列印黑白對比 */
     @media print {
       body {
         background-color: #ffffff !important;
+        color: #09090b !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
       .a4-page {
         margin: 0;
         border: none;
-        page-break-after: always;
         box-shadow: none;
+        page-break-after: always;
       }
     }
   </style>
 </head>
-<body class="bg-slate-100 text-slate-900 font-sans antialiased">
+<body class="bg-zinc-100 text-slate-800 font-sans antialiased">
 
   <!-- ==================== PAGE 1 ==================== -->
-  <div class="a4-page bg-tech-grid flex flex-col justify-between shadow-xl">
+  <div class="a4-page bg-tech-grid flex flex-col justify-between shadow-md">
     <div>
       <!-- Header / Hero Section -->
-      <div class="flex justify-between items-start border-b-2 border-slate-900 pb-6 mb-6">
+      <div class="flex justify-between items-start border-b border-slate-200 pb-4 mb-4">
         <div>
-          <div class="inline-flex items-center space-x-2 px-2.5 py-0.5 rounded-full bg-slate-100 border border-slate-400 text-slate-900 text-[11px] font-mono mb-2">
+          <div class="inline-flex items-center space-x-2 px-2.5 py-0.5 rounded-full bg-slate-100 border border-slate-300 text-slate-800 text-[11px] font-mono mb-1.5 font-bold">
             <span class="w-1.5 h-1.5 rounded-full bg-slate-900"></span>
-            <span class="font-bold">AI 輔助開發 · 資深全端工程師</span>
+            <span>AI 輔助開發 · 資深全端工程師</span>
           </div>
-          <h1 class="text-4xl font-extrabold text-slate-950 tracking-tight">Sam Chung</h1>
-          <p class="text-base font-mono text-slate-700 font-bold mt-1">Frontend | Backend | Architecture</p>
+          <h1 class="text-3xl font-extrabold text-slate-950 tracking-tight">Sam Chung</h1>
+          <p class="text-sm font-mono text-slate-700 font-bold mt-0.5">Frontend | Backend | Architecture</p>
         </div>
 
-        <div class="text-right space-y-1 font-mono text-xs text-slate-700">
-          <div><i class="fa-regular fa-envelope text-slate-900"></i> knight660907@gmail.com</div>
-          <div><i class="fa-solid fa-location-dot text-slate-900"></i> New Taipei City, Taiwan</div>
-          <div class="text-slate-950 font-bold border-b border-slate-900 inline-block">Remote & Hybrid Ready</div>
+        <div class="text-right space-y-0.5 font-mono text-[11px] text-slate-600">
+          <div><i class="fa-regular fa-envelope text-slate-800"></i> knight660907@gmail.com</div>
+          <div><i class="fa-solid fa-location-dot text-slate-800"></i> New Taipei City, Taiwan</div>
+          <div class="text-slate-900 font-extrabold">Remote & Hybrid Ready</div>
         </div>
       </div>
 
       <!-- Key Stats Grid -->
-      <div class="grid grid-cols-3 gap-4 mb-6">
-        <div class="tech-card p-3 rounded-lg text-center">
-          <div class="text-xl font-bold font-mono text-slate-950">25+</div>
-          <div class="text-[11px] text-slate-600 font-semibold">Years Exp.</div>
+      <div class="grid grid-cols-3 gap-3 mb-4">
+        <div class="tech-card p-2.5 rounded-lg text-center">
+          <div class="text-lg font-extrabold font-mono text-slate-950">25+</div>
+          <div class="text-[10px] text-slate-600 font-medium">Years Exp.</div>
         </div>
-        <div class="tech-card p-3 rounded-lg text-center">
-          <div class="text-xl font-bold font-mono text-slate-950">100+</div>
-          <div class="text-[11px] text-slate-600 font-semibold">Projects Completed</div>
+        <div class="tech-card p-2.5 rounded-lg text-center">
+          <div class="text-lg font-extrabold font-mono text-slate-950">100+</div>
+          <div class="text-[10px] text-slate-600 font-medium">Projects Completed</div>
         </div>
-        <div class="tech-card p-3 rounded-lg text-center">
-          <div class="text-xl font-bold font-mono text-slate-950">Full Stack</div>
-          <div class="text-[11px] text-slate-600 font-semibold">Architecture & Dev</div>
+        <div class="tech-card p-2.5 rounded-lg text-center">
+          <div class="text-lg font-extrabold font-mono text-slate-950">Full Stack</div>
+          <div class="text-[10px] text-slate-600 font-medium">Architecture & Dev</div>
         </div>
       </div>
 
       <!-- 01. 關於我 -->
-      <div class="mb-6">
-        <h2 class="text-lg font-bold text-slate-950 mb-2 font-mono border-l-4 border-slate-900 pl-3">
+      <div class="mb-4">
+        <h2 class="text-base font-bold text-slate-950 mb-2 font-mono border-l-4 border-slate-900 pl-2.5">
           01. 關於我 / About Me
         </h2>
-        <div class="tech-card p-4 rounded-lg text-xs leading-relaxed text-slate-800 space-y-2">
+        <div class="tech-card p-3 rounded-lg text-xs leading-relaxed text-slate-700 space-y-1.5">
           <p>
-            擁有超過 <strong class="text-slate-950 font-extrabold">25 年</strong> 的軟體開發經驗，熟悉前端、後端、資料庫與系統架構設計。曾參與電子商務、教育科技、遊戲平台、企業管理系統等不同領域專案。
+            擁有超過 <strong class="text-slate-950">25 年</strong> 的軟體開發經驗，熟悉前端、後端、資料庫與系統架構設計。曾參與電子商務、教育科技、遊戲平台、企業管理系統等不同領域專案。
           </p>
           <p>
-            持續導入 <strong class="text-slate-950 underline decoration-slate-400 underline-offset-2">AI 輔助開發流程</strong>，提高程式品質、開發效率與系統維護能力。
+            持續導入 <strong class="text-slate-950">AI 輔助開發流程</strong>，提高程式品質、開發效率與系統維護能力。
           </p>
         </div>
       </div>
 
       <!-- 02. 技術能力 -->
-      <div class="mb-6">
-        <h2 class="text-lg font-bold text-slate-950 mb-3 font-mono border-l-4 border-slate-900 pl-3">
+      <div class="mb-4">
+        <h2 class="text-base font-bold text-slate-950 mb-2 font-mono border-l-4 border-slate-900 pl-2.5">
           02. 技術能力 / Technical Skills
         </h2>
-        <div class="grid grid-cols-2 gap-3 text-xs">
-          <div class="tech-card p-3 rounded-lg">
-            <div class="font-bold text-slate-950 mb-1"><i class="fa-solid fa-code text-slate-700"></i> Frontend</div>
-            <p class="text-slate-700 font-mono text-[11px]">Vue.js, Nuxt.js, React, Next.js, Angular, Svelte, TypeScript, JavaScript, Cocos Creator, Bootstrap, Tailwind CSS, JQuery</p>
+        <div class="grid grid-cols-3 gap-2.5 text-xs">
+          <div class="tech-card p-2.5 rounded-lg">
+            <div class="font-bold text-slate-950 mb-0.5 text-[11px]"><i class="fa-solid fa-code text-slate-700"></i> Frontend</div>
+            <p class="text-slate-700 font-mono text-[10px]">Vue.js, Nuxt.js, React, Next.js, Angular, Svelte, TypeScript, JavaScript, Cocos Creator, Bootstrap, Tailwind CSS, JQuery</p>
           </div>
-          <div class="tech-card p-3 rounded-lg">
-            <div class="font-bold text-slate-950 mb-1"><i class="fa-solid fa-server text-slate-700"></i> Backend</div>
-            <p class="text-slate-700 font-mono text-[11px]">Python, Django, GO, Node.js, Express.js, Nest.js, ASP.NET</p>
+          <div class="tech-card p-2.5 rounded-lg">
+            <div class="font-bold text-slate-950 mb-0.5 text-[11px]"><i class="fa-solid fa-server text-slate-700"></i> Backend</div>
+            <p class="text-slate-700 font-mono text-[10px]">Python, Django, GO, Node.js, Express.js, Nest.js, ASP.NET</p>
           </div>
-          <div class="tech-card p-3 rounded-lg">
-            <div class="font-bold text-slate-950 mb-1"><i class="fa-solid fa-layer-group text-slate-700"></i> Other</div>
-            <p class="text-slate-700 font-mono text-[11px]">C#, VB.NET, ASP.NET, ASP, PHP, Laravel, CodeIgniter, Java, VB6, Delphi, C/C++</p>
+          <div class="tech-card p-2.5 rounded-lg">
+            <div class="font-bold text-slate-950 mb-0.5 text-[11px]"><i class="fa-solid fa-layer-group text-slate-700"></i> Other</div>
+            <p class="text-slate-700 font-mono text-[10px]">C#, VB.NET, ASP.NET, ASP, PHP, Laravel, CodeIgniter, Java, VB6, Delphi, C/C++</p>
           </div>
-          <div class="tech-card p-3 rounded-lg">
-            <div class="font-bold text-slate-950 mb-1"><i class="fa-solid fa-microchip text-slate-700"></i> AI</div>
-            <p class="text-slate-700 font-mono text-[11px]">LangChain, Ollama, Machine Learning</p>
+          <div class="tech-card p-2.5 rounded-lg">
+            <div class="font-bold text-slate-950 mb-0.5 text-[11px]"><i class="fa-solid fa-brain text-slate-700"></i> AI</div>
+            <p class="text-slate-700 font-mono text-[10px]">LangChain, Ollama, Machine Learning, 深度學習 (Deep Learning), RAG</p>
           </div>
-          <div class="tech-card p-3 rounded-lg">
-            <div class="font-bold text-slate-950 mb-1"><i class="fa-solid fa-database text-slate-700"></i> Database</div>
-            <p class="text-slate-700 font-mono text-[11px]">MySQL, PostgreSQL, MSSQL, MariaDB, MongoDB, Redis, Redshift, SQLite, Access</p>
+          <div class="tech-card p-2.5 rounded-lg">
+            <div class="font-bold text-slate-950 mb-0.5 text-[11px]"><i class="fa-solid fa-database text-slate-700"></i> Database</div>
+            <p class="text-slate-700 font-mono text-[10px]">MySQL, PostgreSQL, MSSQL, MariaDB, MongoDB, Redis, Redshift, SQLite, Access</p>
           </div>
-          <div class="tech-card p-3 rounded-lg">
-            <div class="font-bold text-slate-950 mb-1"><i class="fa-solid fa-screwdriver-wrench text-slate-700"></i> DevOps</div>
-            <p class="text-slate-700 font-mono text-[11px]">Docker, Docker Compose, Git, GitLab, GitHub, Bitbucket, Nginx, Apache, IIS</p>
+          <div class="tech-card p-2.5 rounded-lg">
+            <div class="font-bold text-slate-950 mb-0.5 text-[11px]"><i class="fa-solid fa-screwdriver-wrench text-slate-700"></i> DevOps</div>
+            <p class="text-slate-700 font-mono text-[10px]">Docker, Docker Compose, Git, GitLab, GitHub, Bitbucket, Nginx, Apache, IIS</p>
+          </div>
+          <div class="tech-card p-2.5 rounded-lg">
+            <div class="font-bold text-slate-950 mb-0.5 text-[11px]"><i class="fa-solid fa-chart-line text-slate-700"></i> 數據分析 Data Analysis</div>
+            <p class="text-slate-700 font-mono text-[10px]">NumPy, Pandas</p>
+          </div>
+          <div class="tech-card p-2.5 rounded-lg">
+            <div class="font-bold text-slate-950 mb-0.5 text-[11px]"><i class="fa-solid fa-chart-pie text-slate-700"></i> 圖表處理 Visualization</div>
+            <p class="text-slate-700 font-mono text-[10px]">Matplotlib, Bokeh, Folium</p>
+          </div>
+          <div class="tech-card p-2.5 rounded-lg">
+            <div class="font-bold text-slate-950 mb-0.5 text-[11px]"><i class="fa-solid fa-spider text-slate-700"></i> 網路爬蟲 Web Scraping</div>
+            <p class="text-slate-700 font-mono text-[10px]">Urllib, Requests, BeautifulSoup, Selenium</p>
           </div>
         </div>
       </div>
 
       <!-- 03. AI 技術整合 -->
       <div>
-        <h2 class="text-lg font-bold text-slate-950 mb-3 font-mono border-l-4 border-slate-900 pl-3">
+        <h2 class="text-base font-bold text-slate-950 mb-2 font-mono border-l-4 border-slate-900 pl-2.5">
           03. AI & Modern Development
         </h2>
-        <div class="grid grid-cols-3 gap-3">
-          <div class="tech-card p-3 rounded-lg text-xs">
-            <div class="font-bold text-slate-950 mb-1"><i class="fa-solid fa-wand-magic-sparkles text-slate-700"></i> AI-Assisted Dev</div>
-            <p class="text-slate-600 text-[10px] leading-normal">提升 Coding 效率、重構、自動化測試與技術文件生成。</p>
+        <div class="grid grid-cols-4 gap-2 text-xs">
+          <div class="tech-card p-2.5 rounded-lg text-xs">
+            <div class="font-bold text-slate-950 mb-0.5 text-[11px]"><i class="fa-solid fa-wand-magic-sparkles text-slate-700"></i> AI-Assisted Dev</div>
+            <p class="text-slate-600 text-[10px] leading-normal">提升 Coding 效率、重構、測試與技術文件生成。</p>
           </div>
-          <div class="tech-card p-3 rounded-lg text-xs">
-            <div class="font-bold text-slate-950 mb-1"><i class="fa-solid fa-brain text-slate-700"></i> LLM Integration</div>
+          <div class="tech-card p-2.5 rounded-lg text-xs">
+            <div class="font-bold text-slate-950 mb-0.5 text-[11px]"><i class="fa-solid fa-brain text-slate-700"></i> LLM Integration</div>
             <p class="text-slate-600 text-[10px] leading-normal">串接 OpenAI API 與 Prompt 規劃，賦予 Web 智慧應用。</p>
           </div>
-          <div class="tech-card p-3 rounded-lg text-xs">
-            <div class="font-bold text-slate-950 mb-1"><i class="fa-solid fa-gears text-slate-700"></i> AI Workflow</div>
+          <div class="tech-card p-2.5 rounded-lg text-xs">
+            <div class="font-bold text-slate-950 mb-0.5 text-[11px]"><i class="fa-solid fa-gears text-slate-700"></i> AI Workflow</div>
             <p class="text-slate-600 text-[10px] leading-normal">優化企業開發流程，實現高效能智慧自動化管理。</p>
+          </div>
+          <div class="tech-card p-2.5 rounded-lg text-xs">
+            <div class="font-bold text-slate-950 mb-0.5 text-[11px]"><i class="fa-solid fa-database text-slate-700"></i> RAG 應用</div>
+            <p class="text-slate-600 text-[10px] leading-normal">結合向量資料庫與檢索增強生成，實現精準知識庫問答。</p>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Page 1 Footer -->
-    <div class="flex justify-between items-center text-[10px] font-mono text-slate-500 border-t border-slate-300 pt-3">
+    <div class="flex justify-between items-center text-[10px] font-mono text-slate-500 border-t border-slate-300 pt-2.5">
       <span>Sam Chung - Resume</span>
       <span>Page 01 / 02</span>
     </div>
@@ -180,130 +187,144 @@
 
 
   <!-- ==================== PAGE 2 ==================== -->
-  <div class="a4-page bg-tech-grid flex flex-col justify-between shadow-xl">
+  <div class="a4-page bg-tech-grid flex flex-col justify-between shadow-md">
     <div>
       <!-- 04. 工作經歷 -->
-      <div class="mb-8">
-        <h2 class="text-lg font-bold text-slate-950 mb-4 font-mono border-l-4 border-slate-900 pl-3">
+      <div class="mb-5">
+        <h2 class="text-base font-bold text-slate-950 mb-3 font-mono border-l-4 border-slate-900 pl-2.5">
           04. 工作經歷 / Experience
         </h2>
 
-        <div class="relative border-l-2 border-slate-300 ml-2 space-y-5 text-xs">
+        <div class="relative border-l border-slate-300 ml-2 space-y-3.5 text-xs">
           
-          <div class="relative pl-6">
-            <span class="absolute -left-[7px] top-1 w-3 h-3 rounded-full bg-slate-950 border-2 border-white"></span>
+          <div class="relative pl-5">
+            <span class="absolute -left-[7px] top-1 w-2.5 h-2.5 rounded-full bg-slate-900"></span>
             <div class="flex justify-between font-mono text-[11px]">
               <span class="text-slate-950 font-bold">Frontend Engineer @ 銳光管理顧問有限公司</span>
-              <span class="text-slate-950 font-bold">2025.05 - 2026.03</span>
+              <span class="text-slate-700">2025.05 - 2026.03</span>
             </div>
-            <p class="text-slate-600 mt-1">開發和維護前端應用程序，負責使用者介面實現、系統整合和技術改進。</p>
+            <p class="text-slate-600 mt-0.5 text-[11px]">開發和維護前端應用程序，負責使用者介面實現、系統整合和技術改進。</p>
           </div>
 
-          <div class="relative pl-6">
-            <span class="absolute -left-[7px] top-1 w-3 h-3 rounded-full bg-slate-400 border-2 border-white"></span>
+          <div class="relative pl-5">
+            <span class="absolute -left-[7px] top-1 w-2.5 h-2.5 rounded-full bg-slate-400 border-2 border-white"></span>
             <div class="flex justify-between font-mono text-[11px]">
               <span class="text-slate-900 font-bold">Frontend Engineer @ 獨角獸管理顧問有限公司</span>
               <span class="text-slate-700">2023.06 - 2025.04</span>
             </div>
-            <p class="text-slate-600 mt-1">負責前端開發、應用程式維護以及與後端團隊的協作。</p>
+            <p class="text-slate-600 mt-0.5 text-[11px]">負責前端開發、應用程式維護以及與後端團隊的協作。</p>
           </div>
 
-          <div class="relative pl-6">
-            <span class="absolute -left-[7px] top-1 w-3 h-3 rounded-full bg-slate-400 border-2 border-white"></span>
+          <div class="relative pl-5">
+            <span class="absolute -left-[7px] top-1 w-2.5 h-2.5 rounded-full bg-slate-400 border-2 border-white"></span>
             <div class="flex justify-between font-mono text-[11px]">
               <span class="text-slate-900 font-bold">Full Stack Developer @ SOHO / 獨立開發者</span>
               <span class="text-slate-700">2020.08 - 2023.05</span>
             </div>
-            <p class="text-slate-600 mt-1">承接多家企業軟體專案，涵蓋全端系統建置、資料庫規劃、微服務與 API 串接。</p>
+            <p class="text-slate-600 mt-0.5 text-[11px]">承接多家企業軟體專案，涵蓋全端系統建置、資料庫規劃、微服務與 API 串接。</p>
           </div>
 
-          <div class="relative pl-6">
-            <span class="absolute -left-[7px] top-1 w-3 h-3 rounded-full bg-slate-400 border-2 border-white"></span>
+          <div class="relative pl-5">
+            <span class="absolute -left-[7px] top-1 w-2.5 h-2.5 rounded-full bg-slate-400 border-2 border-white"></span>
             <div class="flex justify-between font-mono text-[11px]">
               <span class="text-slate-900 font-bold">Software Engineer @ 暐曜教育科技有限公司</span>
               <span class="text-slate-700">2018.12 - 2020.07</span>
             </div>
-            <p class="text-slate-600 mt-1">開發 Education Tech 平台、管理後端核心業務邏輯與資料庫最佳化。</p>
+            <p class="text-slate-600 mt-0.5 text-[11px]">開發 Education Tech 平台、管理後端核心業務邏輯與資料庫最佳化。</p>
           </div>
 
-          <div class="relative pl-6">
-            <span class="absolute -left-[7px] top-1 w-3 h-3 rounded-full bg-slate-400 border-2 border-white"></span>
+          <div class="relative pl-5">
+            <span class="absolute -left-[7px] top-1 w-2.5 h-2.5 rounded-full bg-slate-400 border-2 border-white"></span>
             <div class="flex justify-between font-mono text-[11px]">
               <span class="text-slate-900 font-bold">Web Development Supervisor @ 京群超媒體股份有限公司</span>
               <span class="text-slate-700">2012.03 - 2016.11</span>
             </div>
-            <p class="text-slate-600 mt-1">管理技術團隊，規劃大型電商與遊戲平台系統架構、金流串接與高流量處理。</p>
+            <p class="text-slate-600 mt-0.5 text-[11px]">管理技術團隊，規劃大型電商與遊戲平台系統架構、金流串接與高流量處理。</p>
           </div>
 
-          <div class="relative pl-6">
-            <span class="absolute -left-[7px] top-1 w-3 h-3 rounded-full bg-slate-400 border-2 border-white"></span>
+          <div class="relative pl-5">
+            <span class="absolute -left-[7px] top-1 w-2.5 h-2.5 rounded-full bg-slate-400 border-2 border-white"></span>
             <div class="flex justify-between font-mono text-[11px]">
               <span class="text-slate-900 font-bold">Internet Programmer @ 宇峻奧汀科技股份有限公司</span>
               <span class="text-slate-700">2009.10 - 2012.02</span>
             </div>
-            <p class="text-slate-600 mt-1">開發了遊戲網站、活動平台和後端管理系統。</p>
+            <p class="text-slate-600 mt-0.5 text-[11px]">開發了遊戲網站、活動平台和後端管理系統。</p>
           </div>
 
-          <div class="relative pl-6">
-            <span class="absolute -left-[7px] top-1 w-3 h-3 rounded-full bg-slate-400 border-2 border-white"></span>
+          <div class="relative pl-5">
+            <span class="absolute -left-[7px] top-1 w-2.5 h-2.5 rounded-full bg-slate-400 border-2 border-white"></span>
             <div class="flex justify-between font-mono text-[11px]">
               <span class="text-slate-900 font-bold">Software Engineer @ 傑邁電子股份有限公司</span>
               <span class="text-slate-700">2006.10 - 2008.05</span>
             </div>
-            <p class="text-slate-600 mt-1">為醫療設備系統開發軟體應用程式、測試工具和自動化控製程式。</p>
+            <p class="text-slate-600 mt-0.5 text-[11px]">為醫療設備系統開發軟體應用程式、測試工具和自動化控製程式。</p>
+          </div>
+
+          <div class="relative pl-5">
+            <span class="absolute -left-[7px] top-1 w-2.5 h-2.5 rounded-full bg-slate-400 border-2 border-white"></span>
+            <div class="flex justify-between font-mono text-[11px]">
+              <span class="text-slate-900 font-bold">約僱人員 @ 永達技術學院</span>
+              <span class="text-slate-700">2005.01 - 2005.08</span>
+            </div>
+            <p class="text-slate-600 mt-0.5 text-[11px]">應用軟體撰寫服務、網頁資料撰寫維護、伺服器及電腦軟硬體與網路環境規劃架設維護、一般行政、社團管理與活動執行。</p>
           </div>
 
         </div>
       </div>
 
       <!-- 05. 專業證照 -->
-      <div class="mb-8">
-        <h2 class="text-lg font-bold text-slate-950 mb-3 font-mono border-l-4 border-slate-900 pl-3">
+      <div class="mb-5">
+        <h2 class="text-base font-bold text-slate-950 mb-2.5 font-mono border-l-4 border-slate-900 pl-2.5">
           05. 專業證照 / Certifications
         </h2>
-        <div class="grid grid-cols-3 gap-3 text-xs">
-          <div class="tech-card p-3 rounded-lg border-l-4 border-l-slate-900">
-            <div class="font-bold text-slate-950">Java</div>
+        <div class="grid grid-cols-4 gap-2.5 text-xs">
+          <div class="tech-card p-2.5 rounded-lg border-l-4 border-l-slate-900">
+            <div class="font-bold text-slate-950 text-[11px]">ITS Java</div>
             <p class="text-[10px] text-slate-600 font-mono">PearsonVue / Certiport</p>
-            <span class="inline-block mt-2 text-[9px] font-mono px-1.5 py-0.5 rounded bg-slate-200 text-slate-900 border border-slate-300 font-bold">Issued 2026</span>
+            <span class="inline-block mt-1.5 text-[9px] font-mono px-1.5 py-0.5 rounded bg-slate-200 text-slate-900 border border-slate-300 font-bold">Issued 2026</span>
           </div>
 
-          <div class="tech-card p-3 rounded-lg border-l-4 border-l-slate-700">
-            <div class="font-bold text-slate-950">Python</div>
+          <div class="tech-card p-2.5 rounded-lg border-l-4 border-l-slate-700">
+            <div class="font-bold text-slate-950 text-[11px]">ITS Python</div>
             <p class="text-[10px] text-slate-600 font-mono">PearsonVue / Certiport</p>
-            <span class="inline-block mt-2 text-[9px] font-mono px-1.5 py-0.5 rounded bg-slate-200 text-slate-900 border border-slate-300 font-bold">Issued 2026</span>
+            <span class="inline-block mt-1.5 text-[9px] font-mono px-1.5 py-0.5 rounded bg-slate-200 text-slate-900 border border-slate-300 font-bold">Issued 2026</span>
           </div>
 
-          <div class="tech-card p-3 rounded-lg border-l-4 border-l-slate-500">
-            <div class="font-bold text-slate-950">Database</div>
+          <div class="tech-card p-2.5 rounded-lg border-l-4 border-l-slate-500">
+            <div class="font-bold text-slate-950 text-[11px]">ITS Database</div>
             <p class="text-[10px] text-slate-600 font-mono">PearsonVue / Certiport</p>
-            <span class="inline-block mt-2 text-[9px] font-mono px-1.5 py-0.5 rounded bg-slate-200 text-slate-900 border border-slate-300 font-bold">Issued 2026</span>
+            <span class="inline-block mt-1.5 text-[9px] font-mono px-1.5 py-0.5 rounded bg-slate-200 text-slate-900 border border-slate-300 font-bold">Issued 2026</span>
+          </div>
+
+          <div class="tech-card p-2.5 rounded-lg border-l-4 border-l-slate-900">
+            <div class="font-bold text-slate-950 text-[11px]">IPAS AI應用規劃師</div>
+            <p class="text-[10px] text-slate-600 font-mono">經濟部</p>
+            <span class="inline-block mt-1.5 text-[9px] font-mono px-1.5 py-0.5 rounded bg-slate-200 text-slate-900 border border-slate-300 font-bold">Issued 2026</span>
           </div>
         </div>
       </div>
 
-      <div class="grid grid-cols-2 gap-4 mb-6">
-        <div class="tech-card p-3 rounded-lg text-center">
-          <div class="text-xl font-bold font-mono text-slate-900 flex items-center justify-center">
-            <img src="assets/img/GitHub.png" style="width:50%" />
-          </div>
-        </div>
-        <div class="tech-card p-3 rounded-lg text-center">
-          <div class="text-xl font-bold font-mono text-slate-900 flex items-center justify-center">
-            <img src="assets/img/Resume.png" style="width:50%;" />
-          </div>
-        </div>
+      <div class="grid grid-cols-2 gap-3 mb-4">
+        <a href="https://github.com/ipasai" target="_blank" class="tech-card p-2.5 rounded-lg text-center block hover:border-slate-900 transition-colors">
+          <div class="font-bold font-mono text-slate-950 text-xs mb-0.5"><i class="fa-brands fa-github mr-1"></i> 個人 GitHub</div>
+          <div class="text-[10px] text-slate-600 font-mono">https://github.com/ipasai</div>
+        </a>
+        <a href="https://github.com/ipasai/langchain" target="_blank" class="tech-card p-2.5 rounded-lg text-center block hover:border-slate-900 transition-colors">
+          <div class="font-bold font-mono text-slate-950 text-xs mb-0.5"><i class="fa-solid fa-diagram-project mr-1"></i> LangChain 多模型交互式應用</div>
+          <div class="text-[10px] text-slate-600 font-mono">https://github.com/ipasai/langchain</div>
+        </a>
       </div>
+
       <!-- Contact Callout -->
-      <div class="tech-card p-4 rounded-lg text-center space-y-1 border-slate-400">
-        <div class="text-xs font-mono text-slate-700 font-bold">// Ready for New Opportunities</div>
-        <div class="text-sm font-bold text-slate-950">Let's Build Something Great Together</div>
-        <div class="text-xs text-slate-600 font-mono">knight660907@gmail.com · New Taipei City, Taiwan</div>
+      <div class="tech-card p-3 rounded-lg text-center space-y-0.5 border-slate-400">
+        <div class="text-[11px] font-mono text-slate-700 font-bold">// Ready for New Opportunities</div>
+        <div class="text-xs font-bold text-slate-950">Let's Build Something Great Together</div>
+        <div class="text-[10px] text-slate-600 font-mono">knight660907@gmail.com · New Taipei City, Taiwan</div>
       </div>
     </div>
 
     <!-- Page 2 Footer -->
-    <div class="flex justify-between items-center text-[10px] font-mono text-slate-500 border-t border-slate-300 pt-3">
+    <div class="flex justify-between items-center text-[10px] font-mono text-slate-500 border-t border-slate-300 pt-2.5">
       <span>Sam Chung - Resume</span>
       <span>Page 02 / 02</span>
     </div>
